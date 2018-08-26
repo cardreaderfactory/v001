@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-16"?>
+<CyProfileTreeItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="CyService" ID="51" DisplayName="MSRvXXX" Name="Custom Service" Type="org.bluetooth.service.custom" UUID="0a55">
+  <CyCharacteristic ID="52" DisplayName="Device Status" Name="Custom Characteristic" Type="org.bluetooth.characteristic.custom" UUID="1a55">
+    <CyDescriptor ID="109" DisplayName="CCCD" Name="Client Characteristic Configuration" Type="org.bluetooth.descriptor.gatt.client_characteristic_configuration" UUID="2902">
+      <Field Name="Properties">
+        <DataFormat>16bit</DataFormat>
+        <ByteLength>2</ByteLength>
+        <Range>
+          <IsDeclared>true</IsDeclared>
+          <Minimum>0</Minimum>
+          <Maximum>3</Maximum>
+        </Range>
+        <ValueType>BITFIELD</ValueType>
+        <Bit>
+          <Index>0</Index>
+          <Size>1</Size>
+          <Value>0</Value>
+          <Enumerations>
+            <Enumeration key="0" value="Notifications disabled" />
+            <Enumeration key="1" value="Notifications enabled" />
+          </Enumerations>
+        </Bit>
+        <Bit>
+          <Index>1</Index>
+          <Size>1</Size>
+          <Value>0</Value>
+          <Enumerations>
+            <Enumeration key="0" value="Indications disabled" />
+            <Enumeration key="1" value="Indications enabled" />
+          </Enumerations>
+        </Bit>
+        <ArrayValue />
+      </Field>
+      <Properties>
+        <Property Type="READ" Present="true" Mandatory="false" />
+        <Property Type="WRITE" Present="true" Mandatory="false" />
+      </Properties>
+      <Permission>
+        <AccessPermission>READ_WRITE</AccessPermission>
+        <EncryptionPermissionWrite>ENCRYPTION_REQUIRED</EncryptionPermissionWrite>
+        <AuthenticationPermissionWrite>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionWrite>
+      </Permission>
+    </CyDescriptor>
+    <Properties>
+      <Property Type="BROADCAST" Present="false" Mandatory="false" />
+      <Property Type="READ" Present="true" Mandatory="false" />
+      <Property Type="WRITE" Present="false" Mandatory="false" />
+      <Property Type="WRITE_WITHOUT_RESPONSE" Present="false" Mandatory="false" />
+      <Property Type="NOTIFY" Present="true" Mandatory="false" />
+      <Property Type="INDICATE" Present="false" Mandatory="false" />
+      <Property Type="AUTHENTICATED_SIGNED_WRITES" Present="false" Mandatory="false" />
+      <Property Type="RELIABLE_WRITE" Present="false" Mandatory="false" />
+      <Property Type="WRITABLE_AUXILIARIES" Present="false" Mandatory="false" />
+    </Properties>
+    <Permission>
+      <EncryptionPermissionRead>ENCRYPTION_REQUIRED</EncryptionPermissionRead>
+      <AuthenticationPermissionRead>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionRead>
+      <EncryptionPermissionWrite>ENCRYPTION_REQUIRED</EncryptionPermissionWrite>
+      <AuthenticationPermissionWrite>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionWrite>
+    </Permission>
+  </CyCharacteristic>
+  <CyCharacteristic ID="120" DisplayName="Login" Name="Custom Characteristic" Type="org.bluetooth.characteristic.custom" UUID="2a55">
+    <Properties>
+      <Property Type="BROADCAST" Present="false" Mandatory="false" />
+      <Property Type="READ" Present="false" Mandatory="false" />
+      <Property Type="WRITE" Present="false" Mandatory="false" />
+      <Property Type="WRITE_WITHOUT_RESPONSE" Present="false" Mandatory="false" />
+      <Property Type="NOTIFY" Present="false" Mandatory="false" />
+      <Property Type="INDICATE" Present="false" Mandatory="false" />
+      <Property Type="AUTHENTICATED_SIGNED_WRITES" Present="false" Mandatory="false" />
+      <Property Type="RELIABLE_WRITE" Present="false" Mandatory="false" />
+      <Property Type="WRITABLE_AUXILIARIES" Present="false" Mandatory="false" />
+    </Properties>
+    <Permission>
+      <AccessPermission>NONE</AccessPermission>
+      <EncryptionPermissionRead>ENCRYPTION_REQUIRED</EncryptionPermissionRead>
+      <AuthenticationPermissionRead>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionRead>
+      <EncryptionPermissionWrite>ENCRYPTION_REQUIRED</EncryptionPermissionWrite>
+      <AuthenticationPermissionWrite>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionWrite>
+    </Permission>
+  </CyCharacteristic>
+  <CyCharacteristic ID="103" DisplayName="Download" Name="Custom Characteristic" Type="org.bluetooth.characteristic.custom" UUID="3a55">
+    <CyDescriptor ID="117" DisplayName="CCCD" Name="Client Characteristic Configuration" Type="org.bluetooth.descriptor.gatt.client_characteristic_configuration" UUID="2902">
+      <Field Name="Properties">
+        <DataFormat>16bit</DataFormat>
+        <ByteLength>2</ByteLength>
+        <Range>
+          <IsDeclared>true</IsDeclared>
+          <Minimum>0</Minimum>
+          <Maximum>3</Maximum>
+        </Range>
+        <ValueType>BITFIELD</ValueType>
+        <Bit>
+          <Index>0</Index>
+          <Size>1</Size>
+          <Value>0</Value>
+          <Enumerations>
+            <Enumeration key="0" value="Notifications disabled" />
+            <Enumeration key="1" value="Notifications enabled" />
+          </Enumerations>
+        </Bit>
+        <Bit>
+          <Index>1</Index>
+          <Size>1</Size>
+          <Value>0</Value>
+          <Enumerations>
+            <Enumeration key="0" value="Indications disabled" />
+            <Enumeration key="1" value="Indications enabled" />
+          </Enumerations>
+        </Bit>
+        <ArrayValue />
+      </Field>
+      <Properties>
+        <Property Type="READ" Present="true" Mandatory="false" />
+        <Property Type="WRITE" Present="true" Mandatory="false" />
+      </Properties>
+      <Permission>
+        <AccessPermission>READ_WRITE</AccessPermission>
+        <EncryptionPermissionWrite>ENCRYPTION_REQUIRED</EncryptionPermissionWrite>
+        <AuthenticationPermissionWrite>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionWrite>
+      </Permission>
+    </CyDescriptor>
+    <Field Name="startOffset">
+      <DataFormat>uint32</DataFormat>
+      <ByteLength>4</ByteLength>
+      <ValueType>BASIC</ValueType>
+      <ArrayValue />
+    </Field>
+    <Field Name="endOffset">
+      <DataFormat>uint32</DataFormat>
+      <ByteLength>4</ByteLength>
+      <ValueType>BASIC</ValueType>
+      <ArrayValue />
+    </Field>
+    <Field Name="crc">
+      <DataFormat>uint32</DataFormat>
+      <ByteLength>4</ByteLength>
+      <ValueType>BASIC</ValueType>
+      <ArrayValue />
+    </Field>
+    <Properties>
+      <Property Type="BROADCAST" Present="false" Mandatory="false" />
+      <Property Type="READ" Present="true" Mandatory="false" />
+      <Property Type="WRITE" Present="true" Mandatory="false" />
+      <Property Type="WRITE_WITHOUT_RESPONSE" Present="false" Mandatory="false" />
+      <Property Type="NOTIFY" Present="true" Mandatory="false" />
+      <Property Type="INDICATE" Present="true" Mandatory="false" />
+      <Property Type="AUTHENTICATED_SIGNED_WRITES" Present="false" Mandatory="false" />
+      <Property Type="RELIABLE_WRITE" Present="false" Mandatory="false" />
+      <Property Type="WRITABLE_AUXILIARIES" Present="false" Mandatory="false" />
+    </Properties>
+    <Permission>
+      <AccessPermission>READ_WRITE</AccessPermission>
+      <EncryptionPermissionRead>ENCRYPTION_REQUIRED</EncryptionPermissionRead>
+      <AuthenticationPermissionRead>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionRead>
+      <EncryptionPermissionWrite>ENCRYPTION_REQUIRED</EncryptionPermissionWrite>
+      <AuthenticationPermissionWrite>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionWrite>
+    </Permission>
+  </CyCharacteristic>
+  <CyCharacteristic ID="128" DisplayName="Erase" Name="Custom Characteristic" Type="org.bluetooth.characteristic.custom" UUID="4a55">
+    <Properties>
+      <Property Type="BROADCAST" Present="false" Mandatory="false" />
+      <Property Type="READ" Present="false" Mandatory="false" />
+      <Property Type="WRITE" Present="false" Mandatory="false" />
+      <Property Type="WRITE_WITHOUT_RESPONSE" Present="false" Mandatory="false" />
+      <Property Type="NOTIFY" Present="false" Mandatory="false" />
+      <Property Type="INDICATE" Present="false" Mandatory="false" />
+      <Property Type="AUTHENTICATED_SIGNED_WRITES" Present="false" Mandatory="false" />
+      <Property Type="RELIABLE_WRITE" Present="false" Mandatory="false" />
+      <Property Type="WRITABLE_AUXILIARIES" Present="false" Mandatory="false" />
+    </Properties>
+    <Permission>
+      <AccessPermission>NONE</AccessPermission>
+      <EncryptionPermissionRead>ENCRYPTION_REQUIRED</EncryptionPermissionRead>
+      <AuthenticationPermissionRead>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionRead>
+      <EncryptionPermissionWrite>ENCRYPTION_REQUIRED</EncryptionPermissionWrite>
+      <AuthenticationPermissionWrite>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionWrite>
+    </Permission>
+  </CyCharacteristic>
+  <CyCharacteristic ID="129" DisplayName="SetPass" Name="Custom Characteristic" Type="org.bluetooth.characteristic.custom" UUID="5a55">
+    <Properties>
+      <Property Type="BROADCAST" Present="false" Mandatory="false" />
+      <Property Type="READ" Present="false" Mandatory="false" />
+      <Property Type="WRITE" Present="false" Mandatory="false" />
+      <Property Type="WRITE_WITHOUT_RESPONSE" Present="false" Mandatory="false" />
+      <Property Type="NOTIFY" Present="false" Mandatory="false" />
+      <Property Type="INDICATE" Present="false" Mandatory="false" />
+      <Property Type="AUTHENTICATED_SIGNED_WRITES" Present="false" Mandatory="false" />
+      <Property Type="RELIABLE_WRITE" Present="false" Mandatory="false" />
+      <Property Type="WRITABLE_AUXILIARIES" Present="false" Mandatory="false" />
+    </Properties>
+    <Permission>
+      <AccessPermission>NONE</AccessPermission>
+      <EncryptionPermissionRead>ENCRYPTION_REQUIRED</EncryptionPermissionRead>
+      <AuthenticationPermissionRead>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionRead>
+      <EncryptionPermissionWrite>ENCRYPTION_REQUIRED</EncryptionPermissionWrite>
+      <AuthenticationPermissionWrite>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionWrite>
+    </Permission>
+  </CyCharacteristic>
+  <CyCharacteristic ID="123" DisplayName="SetKey" Name="Custom Characteristic" Type="org.bluetooth.characteristic.custom" UUID="6a55">
+    <Properties>
+      <Property Type="BROADCAST" Present="false" Mandatory="false" />
+      <Property Type="READ" Present="false" Mandatory="false" />
+      <Property Type="WRITE" Present="false" Mandatory="false" />
+      <Property Type="WRITE_WITHOUT_RESPONSE" Present="true" Mandatory="false" />
+      <Property Type="NOTIFY" Present="false" Mandatory="false" />
+      <Property Type="INDICATE" Present="false" Mandatory="false" />
+      <Property Type="AUTHENTICATED_SIGNED_WRITES" Present="false" Mandatory="false" />
+      <Property Type="RELIABLE_WRITE" Present="false" Mandatory="false" />
+      <Property Type="WRITABLE_AUXILIARIES" Present="false" Mandatory="false" />
+    </Properties>
+    <Permission>
+      <AccessPermission>WRITE</AccessPermission>
+      <EncryptionPermissionRead>ENCRYPTION_REQUIRED</EncryptionPermissionRead>
+      <AuthenticationPermissionRead>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionRead>
+      <EncryptionPermissionWrite>ENCRYPTION_REQUIRED</EncryptionPermissionWrite>
+      <AuthenticationPermissionWrite>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionWrite>
+    </Permission>
+  </CyCharacteristic>
+  <CyCharacteristic ID="124" DisplayName="SetName" Name="Custom Characteristic" Type="org.bluetooth.characteristic.custom" UUID="7a55">
+    <Properties>
+      <Property Type="BROADCAST" Present="false" Mandatory="false" />
+      <Property Type="READ" Present="false" Mandatory="false" />
+      <Property Type="WRITE" Present="false" Mandatory="false" />
+      <Property Type="WRITE_WITHOUT_RESPONSE" Present="false" Mandatory="false" />
+      <Property Type="NOTIFY" Present="false" Mandatory="false" />
+      <Property Type="INDICATE" Present="false" Mandatory="false" />
+      <Property Type="AUTHENTICATED_SIGNED_WRITES" Present="false" Mandatory="false" />
+      <Property Type="RELIABLE_WRITE" Present="false" Mandatory="false" />
+      <Property Type="WRITABLE_AUXILIARIES" Present="false" Mandatory="false" />
+    </Properties>
+    <Permission>
+      <AccessPermission>NONE</AccessPermission>
+      <EncryptionPermissionRead>ENCRYPTION_REQUIRED</EncryptionPermissionRead>
+      <AuthenticationPermissionRead>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionRead>
+      <EncryptionPermissionWrite>ENCRYPTION_REQUIRED</EncryptionPermissionWrite>
+      <AuthenticationPermissionWrite>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionWrite>
+    </Permission>
+  </CyCharacteristic>
+  <CyCharacteristic ID="131" DisplayName="Upgrade" Name="Custom Characteristic" Type="org.bluetooth.characteristic.custom" UUID="8a55">
+    <Properties>
+      <Property Type="BROADCAST" Present="false" Mandatory="false" />
+      <Property Type="READ" Present="false" Mandatory="false" />
+      <Property Type="WRITE" Present="false" Mandatory="false" />
+      <Property Type="WRITE_WITHOUT_RESPONSE" Present="false" Mandatory="false" />
+      <Property Type="NOTIFY" Present="false" Mandatory="false" />
+      <Property Type="INDICATE" Present="false" Mandatory="false" />
+      <Property Type="AUTHENTICATED_SIGNED_WRITES" Present="false" Mandatory="false" />
+      <Property Type="RELIABLE_WRITE" Present="false" Mandatory="false" />
+      <Property Type="WRITABLE_AUXILIARIES" Present="false" Mandatory="false" />
+    </Properties>
+    <Permission>
+      <AccessPermission>NONE</AccessPermission>
+      <EncryptionPermissionRead>ENCRYPTION_REQUIRED</EncryptionPermissionRead>
+      <AuthenticationPermissionRead>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionRead>
+      <EncryptionPermissionWrite>ENCRYPTION_REQUIRED</EncryptionPermissionWrite>
+      <AuthenticationPermissionWrite>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionWrite>
+    </Permission>
+  </CyCharacteristic>
+  <CyCharacteristic ID="126" DisplayName="SetTime" Name="Custom Characteristic" Type="org.bluetooth.characteristic.custom" UUID="9a55">
+    <Properties>
+      <Property Type="BROADCAST" Present="false" Mandatory="false" />
+      <Property Type="READ" Present="false" Mandatory="false" />
+      <Property Type="WRITE" Present="false" Mandatory="false" />
+      <Property Type="WRITE_WITHOUT_RESPONSE" Present="false" Mandatory="false" />
+      <Property Type="NOTIFY" Present="false" Mandatory="false" />
+      <Property Type="INDICATE" Present="false" Mandatory="false" />
+      <Property Type="AUTHENTICATED_SIGNED_WRITES" Present="false" Mandatory="false" />
+      <Property Type="RELIABLE_WRITE" Present="false" Mandatory="false" />
+      <Property Type="WRITABLE_AUXILIARIES" Present="false" Mandatory="false" />
+    </Properties>
+    <Permission>
+      <AccessPermission>NONE</AccessPermission>
+      <EncryptionPermissionRead>ENCRYPTION_REQUIRED</EncryptionPermissionRead>
+      <AuthenticationPermissionRead>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionRead>
+      <EncryptionPermissionWrite>ENCRYPTION_REQUIRED</EncryptionPermissionWrite>
+      <AuthenticationPermissionWrite>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionWrite>
+    </Permission>
+  </CyCharacteristic>
+  <CyCharacteristic ID="112" DisplayName="Manufacturer Name String" Name="Manufacturer Name String" Type="org.bluetooth.characteristic.manufacturer_name_string" UUID="2A29">
+    <Field Name="Manufacturer Name">
+      <DataFormat>utf8s</DataFormat>
+      <ByteLength>17</ByteLength>
+      <ValueType>BASIC</ValueType>
+      <GeneralValue>CardReaderFactory</GeneralValue>
+      <ArrayValue />
+    </Field>
+    <Properties>
+      <Property Type="BROADCAST" Present="false" Mandatory="false" />
+      <Property Type="READ" Present="true" Mandatory="false" />
+      <Property Type="WRITE_WITHOUT_RESPONSE" Present="false" Mandatory="false" />
+      <Property Type="WRITE" Present="false" Mandatory="false" />
+      <Property Type="NOTIFY" Present="false" Mandatory="false" />
+      <Property Type="INDICATE" Present="false" Mandatory="false" />
+      <Property Type="AUTHENTICATED_SIGNED_WRITES" Present="false" Mandatory="false" />
+      <Property Type="RELIABLE_WRITE" Present="false" Mandatory="false" />
+      <Property Type="WRITABLE_AUXILIARIES" Present="false" Mandatory="false" />
+    </Properties>
+    <Permission>
+      <EncryptionPermissionRead>ENCRYPTION_REQUIRED</EncryptionPermissionRead>
+      <AuthenticationPermissionRead>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionRead>
+      <EncryptionPermissionWrite>ENCRYPTION_REQUIRED</EncryptionPermissionWrite>
+      <AuthenticationPermissionWrite>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionWrite>
+    </Permission>
+  </CyCharacteristic>
+  <CyCharacteristic ID="113" DisplayName="Model Number String" Name="Model Number String" Type="org.bluetooth.characteristic.model_number_string" UUID="2A24">
+    <Field Name="Model Number">
+      <DataFormat>utf8s</DataFormat>
+      <ByteLength>4</ByteLength>
+      <ValueType>BASIC</ValueType>
+      <GeneralValue>v001</GeneralValue>
+      <ArrayValue />
+    </Field>
+    <Properties>
+      <Property Type="BROADCAST" Present="false" Mandatory="false" />
+      <Property Type="READ" Present="true" Mandatory="false" />
+      <Property Type="WRITE_WITHOUT_RESPONSE" Present="false" Mandatory="false" />
+      <Property Type="WRITE" Present="false" Mandatory="false" />
+      <Property Type="NOTIFY" Present="false" Mandatory="false" />
+      <Property Type="INDICATE" Present="false" Mandatory="false" />
+      <Property Type="AUTHENTICATED_SIGNED_WRITES" Present="false" Mandatory="false" />
+      <Property Type="RELIABLE_WRITE" Present="false" Mandatory="false" />
+      <Property Type="WRITABLE_AUXILIARIES" Present="false" Mandatory="false" />
+    </Properties>
+    <Permission>
+      <EncryptionPermissionRead>ENCRYPTION_REQUIRED</EncryptionPermissionRead>
+      <AuthenticationPermissionRead>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionRead>
+      <EncryptionPermissionWrite>ENCRYPTION_REQUIRED</EncryptionPermissionWrite>
+      <AuthenticationPermissionWrite>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionWrite>
+    </Permission>
+  </CyCharacteristic>
+  <CyCharacteristic ID="114" DisplayName="Serial Number String" Name="Serial Number String" Type="org.bluetooth.characteristic.serial_number_string" UUID="2A25">
+    <Field Name="Serial Number">
+      <DataFormat>utf8s</DataFormat>
+      <ByteLength>6</ByteLength>
+      <ValueType>BASIC</ValueType>
+      <GeneralValue>111111</GeneralValue>
+      <ArrayValue />
+    </Field>
+    <Properties>
+      <Property Type="BROADCAST" Present="false" Mandatory="false" />
+      <Property Type="READ" Present="true" Mandatory="false" />
+      <Property Type="WRITE_WITHOUT_RESPONSE" Present="false" Mandatory="false" />
+      <Property Type="WRITE" Present="false" Mandatory="false" />
+      <Property Type="NOTIFY" Present="false" Mandatory="false" />
+      <Property Type="INDICATE" Present="false" Mandatory="false" />
+      <Property Type="AUTHENTICATED_SIGNED_WRITES" Present="false" Mandatory="false" />
+      <Property Type="RELIABLE_WRITE" Present="false" Mandatory="false" />
+      <Property Type="WRITABLE_AUXILIARIES" Present="false" Mandatory="false" />
+    </Properties>
+    <Permission>
+      <EncryptionPermissionRead>ENCRYPTION_REQUIRED</EncryptionPermissionRead>
+      <AuthenticationPermissionRead>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionRead>
+      <EncryptionPermissionWrite>ENCRYPTION_REQUIRED</EncryptionPermissionWrite>
+      <AuthenticationPermissionWrite>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionWrite>
+    </Permission>
+  </CyCharacteristic>
+  <CyCharacteristic ID="115" DisplayName="Hardware Revision String" Name="Hardware Revision String" Type="org.bluetooth.characteristic.hardware_revision_string" UUID="2A27">
+    <Field Name="Hardware Revision">
+      <DataFormat>utf8s</DataFormat>
+      <ByteLength>4</ByteLength>
+      <ValueType>BASIC</ValueType>
+      <GeneralValue>0.01</GeneralValue>
+      <ArrayValue />
+    </Field>
+    <Properties>
+      <Property Type="BROADCAST" Present="false" Mandatory="false" />
+      <Property Type="READ" Present="true" Mandatory="false" />
+      <Property Type="WRITE_WITHOUT_RESPONSE" Present="false" Mandatory="false" />
+      <Property Type="WRITE" Present="false" Mandatory="false" />
+      <Property Type="NOTIFY" Present="false" Mandatory="false" />
+      <Property Type="INDICATE" Present="false" Mandatory="false" />
+      <Property Type="AUTHENTICATED_SIGNED_WRITES" Present="false" Mandatory="false" />
+      <Property Type="RELIABLE_WRITE" Present="false" Mandatory="false" />
+      <Property Type="WRITABLE_AUXILIARIES" Present="false" Mandatory="false" />
+    </Properties>
+    <Permission>
+      <EncryptionPermissionRead>ENCRYPTION_REQUIRED</EncryptionPermissionRead>
+      <AuthenticationPermissionRead>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionRead>
+      <EncryptionPermissionWrite>ENCRYPTION_REQUIRED</EncryptionPermissionWrite>
+      <AuthenticationPermissionWrite>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionWrite>
+    </Permission>
+  </CyCharacteristic>
+  <CyCharacteristic ID="116" DisplayName="Firmware Revision String" Name="Firmware Revision String" Type="org.bluetooth.characteristic.firmware_revision_string" UUID="2A26">
+    <Field Name="Firmware Revision">
+      <DataFormat>utf8s</DataFormat>
+      <ByteLength>4</ByteLength>
+      <ValueType>BASIC</ValueType>
+      <GeneralValue>0.01</GeneralValue>
+      <ArrayValue />
+    </Field>
+    <Properties>
+      <Property Type="BROADCAST" Present="false" Mandatory="false" />
+      <Property Type="READ" Present="true" Mandatory="false" />
+      <Property Type="WRITE_WITHOUT_RESPONSE" Present="false" Mandatory="false" />
+      <Property Type="WRITE" Present="false" Mandatory="false" />
+      <Property Type="NOTIFY" Present="false" Mandatory="false" />
+      <Property Type="INDICATE" Present="false" Mandatory="false" />
+      <Property Type="AUTHENTICATED_SIGNED_WRITES" Present="false" Mandatory="false" />
+      <Property Type="RELIABLE_WRITE" Present="false" Mandatory="false" />
+      <Property Type="WRITABLE_AUXILIARIES" Present="false" Mandatory="false" />
+    </Properties>
+    <Permission>
+      <EncryptionPermissionRead>ENCRYPTION_REQUIRED</EncryptionPermissionRead>
+      <AuthenticationPermissionRead>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionRead>
+      <EncryptionPermissionWrite>ENCRYPTION_REQUIRED</EncryptionPermissionWrite>
+      <AuthenticationPermissionWrite>SECURE_AUTHENTICATION_REQUIRED</AuthenticationPermissionWrite>
+    </Permission>
+  </CyCharacteristic>
+  <Declaration>PrimarySingleInstance</Declaration>
+  <IncludedServices />
+</CyProfileTreeItem>
